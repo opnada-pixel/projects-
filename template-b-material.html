@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bvlgari Lighthouse — El Alfy Holding</title>
+<meta name="description" content="Bvlgari Lighthouse, Jumeirah Bay Island — Arabescato Corchia marble and Travertino Navona supplied and installed by El Alfy.">
+<link rel="preload" href="instrument-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="tpl.css">
+<style>
+/* TEMPLATE B — MATERIAL
+   For: projects where the stone is the story (residential, hotel interiors, bathrooms).
+   Split hero, a sticky text column beside scrolling photographs, one panel per material, mosaic gallery. */
+.b-hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);min-height:100vh}
+.b-hero .tx{padding:140px var(--gut) 56px;display:flex;flex-direction:column;justify-content:space-between;gap:48px}
+.b-hero .crumb{color:var(--muted);opacity:1}
+.b-hero h1{font-size:clamp(56px,7.4vw,124px)}
+.b-hero .meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 24px}
+.b-hero .meta div{border-top:1px solid var(--ink);padding-top:12px}
+.b-hero .meta dt{color:var(--muted)}
+.b-hero .meta dd{font-family:var(--serif);font-size:24px;line-height:1.1;margin-top:6px}
+.b-hero .pic{position:relative;min-height:70vh}
+.b-hero .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.b-hero .pic .tag{position:absolute;left:24px;bottom:22px;z-index:1;color:var(--on)}
+.status{display:inline-flex;align-items:center;gap:10px}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--ink);position:relative}
+.js-motion .status i::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:1px solid var(--ink);animation:ping 2.4s var(--ease) infinite}
+@keyframes ping{from{transform:scale(.4);opacity:1}to{transform:scale(1.8);opacity:0}}
+
+.story{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px}
+.story .left{position:sticky;top:120px;align-self:start;display:flex;flex-direction:column;gap:28px}
+.story .right{display:flex;flex-direction:column;gap:24px}
+.story .right figure:nth-child(odd){width:86%}
+.story .right figure:nth-child(even){width:70%;margin-left:auto}
+.story .ph{aspect-ratio:4/5}
+.story figcaption{display:flex;justify-content:space-between;margin-top:12px;font-size:13px;color:var(--muted)}
+.story .idx{font-family:var(--serif);font-size:96px;line-height:.85;color:var(--faint)}
+.story .idx b{font-weight:400;color:var(--ink)}
+
+.mats2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
+.mpanel{position:relative;min-height:84vh;overflow:hidden;color:var(--on);display:flex;align-items:flex-end}
+.mpanel>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mpanel::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,19,17,.05) 30%,rgba(20,19,17,.82) 100%)}
+.mpanel .c{position:relative;z-index:1;padding:40px;display:flex;flex-direction:column;gap:16px;max-width:520px}
+.mpanel .sw{width:72px;height:72px;box-shadow:0 0 0 1px rgba(255,255,255,.4)}
+.mpanel h3{font-family:var(--serif);font-weight:400;font-size:clamp(36px,3.6vw,56px);line-height:1}
+.mpanel p{color:var(--on-soft)}
+.mpanel .chips span{color:var(--on);border-color:rgba(244,242,238,.35);background:rgba(255,255,255,.06)}
+
+.mosaic{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+.mosaic figure:nth-child(1){grid-column:1 / span 7;grid-row:span 2}
+.mosaic figure:nth-child(2){grid-column:8 / span 5}
+.mosaic figure:nth-child(3){grid-column:8 / span 5}
+.mosaic .ph{height:100%;min-height:300px}
+.mosaic figure:nth-child(1) .ph{min-height:640px}
+
+.close2{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:start}
+
+@media (max-width:900px){
+  .b-hero,.story,.mats2,.close2{grid-template-columns:minmax(0,1fr)}
+  .b-hero .tx{padding-top:120px}
+  .story .left{position:relative;top:0}
+  .story .right figure:nth-child(n){width:100%}
+  .mpanel{min-height:76vh}
+  .mosaic figure:nth-child(n){grid-column:1 / -1;grid-row:auto}
+  .mosaic figure:nth-child(1) .ph,.mosaic .ph{min-height:0;aspect-ratio:4/5}
+}
+</style>
+</head>
+<body>
+<header class="nav" data-nav><div class="wrap">
+  <a class="logo" href="../index.html">EL ALFY</a>
+  <ul><li><a href="../about.html">About</a></li><li><a href="../projects.html" aria-current="page">Projects</a></li><li><a href="../portfolio.html">Portfolio</a></li><li><a href="../careers.html">Careers</a></li><li><a class="cta" href="../contact.html">Contact</a></li></ul>
+  <button class="menu" type="button" aria-expanded="false">Menu</button>
+</div></header>
+
+<main>
+  <!-- HERO: text column left, tall photo right (iris reveal) -->
+  <section class="b-hero">
+    <div class="tx">
+      <div>
+        <nav class="crumb sc" aria-label="Breadcrumb" data-r><a href="../projects.html">Projects</a><i>/</i><span>Residential</span></nav>
+        <h1 class="h-xl" data-split="lines" style="margin-top:36px">Bvlgari<br>Lighthouse</h1>
+        <p class="lede" data-r style="--d:3;margin-top:32px;max-width:24ch">Two stones, carried from the quarry to the last finish.</p>
+      </div>
+      <dl class="meta">
+        <div data-r style="--d:4"><dt class="sc">Location</dt><dd>Jumeirah Bay, Dubai</dd></div>
+        <div data-r style="--d:5"><dt class="sc">Status</dt><dd class="status"><i></i>Ongoing</dd></div>
+        <div data-r style="--d:6"><dt class="sc">Developer</dt><dd>Meraas</dd></div>
+        <div data-r style="--d:7"><dt class="sc">Stone works</dt><dd>El Alfy Saraya</dd></div>
+      </dl>
+    </div>
+    <div class="ph pic" data-wipe="iris"><img src="bvlgari-lighthouse-01.jpg" alt="Freestanding Arabescato Corchia marble bathtub" data-par="0.08" style="object-position:50% 55%" fetchpriority="high"><span class="tag sc">Freestanding bath · Arabescato Corchia</span></div>
+  </section>
+
+  <!-- STORY: sticky text, photographs scroll past in an offset rhythm -->
+  <section class="sec">
+    <div class="wrap story">
+      <div class="left">
+        <span class="k sc">The project</span>
+        <h2 class="h-l" data-split>A story told in marble.</h2>
+        <p class="body" data-r>Bvlgari Lighthouse is a Meraas residential tower on Jumeirah Bay Island. El Alfy Saraya supplies and installs its natural stone, from polished travertine floors and column cladding to freestanding marble bathtubs.</p>
+        <p class="idx" data-r><b><span data-count="6">6</span></b> / 6<br><span class="sc muted" style="font-family:var(--sans)">Spaces shown</span></p>
+      </div>
+      <div class="right">
+        <figure data-lightbox="Vanity · Arabescato Corchia"><div class="ph" data-wipe><img src="bvlgari-lighthouse-03.jpg" alt="Marble vanity" loading="lazy" data-par="0.06"></div><figcaption><span>Vanity</span><span>Arabescato Corchia</span></figcaption></figure>
+        <figure data-lightbox="Lift lobby · Travertino Navona"><div class="ph" data-wipe><img src="bvlgari-lighthouse-04.jpg" alt="Travertine lift lobby" loading="lazy" data-par="0.06"></div><figcaption><span>Lift lobby</span><span>Travertino Navona</span></figcaption></figure>
+        <figure data-lightbox="Bath and floor · both stones"><div class="ph" data-wipe><img src="bvlgari-lighthouse-02.jpg" alt="Bath with marble and travertine floor" loading="lazy" data-par="0.06"></div><figcaption><span>Bath and floor</span><span>Both stones</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- MATERIALS: one full-height panel per stone -->
+  <section class="mats2">
+    <article class="mpanel" data-wipe><img src="bvlgari-lighthouse-01.jpg" alt="" data-par="0.1" style="object-position:50% 60%">
+      <div class="c" data-r><span class="sc" style="color:var(--on-soft)">Material 01 · Polished</span><i class="sw vein" style="--c:#ECEAE6"></i><h3>Arabescato Corchia</h3><p>A white marble with bold grey veining, used where the stone is seen up close.</p><div class="chips"><span>Bathtubs</span><span>Vanities</span><span>Feature pieces</span></div></div>
+    </article>
+    <article class="mpanel" data-wipe style="--d:1"><img src="bvlgari-lighthouse-04.jpg" alt="" data-par="0.1">
+      <div class="c" data-r style="--d:1"><span class="sc" style="color:var(--on-soft)">Material 02 · Polished</span><i class="sw" style="--c:#D8C3A2;--d:1"></i><h3>Travertino Navona</h3><p>A warm, banded travertine that runs through the floors and wraps the columns.</p><div class="chips"><span>Flooring</span><span>Columns</span><span>Wall cladding</span></div></div>
+    </article>
+  </section>
+
+  <!-- GALLERY: mosaic -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head"><span class="sc">Gallery</span><span class="sc">Tap to enlarge</span></div>
+      <div class="mosaic">
+        <figure data-lightbox="Travertine vanity"><div class="ph" data-wipe><img src="bvlgari-lighthouse-05.jpg" alt="Travertine vanity" loading="lazy"></div></figure>
+        <figure data-lightbox="Kitchen"><div class="ph" data-wipe="side" style="--d:1"><img src="bvlgari-lighthouse-06.jpg" alt="Kitchen with stone counter" loading="lazy"></div></figure>
+        <figure data-lightbox="Bath and floor"><div class="ph" data-wipe="side" style="--d:2"><img src="bvlgari-lighthouse-02.jpg" alt="Bath and floor" loading="lazy" style="object-position:50% 70%"></div></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACTS + SCOPE -->
+  <section class="sec">
+    <div class="wrap close2">
+      <h2 class="h-l" data-split>Held to one standard, block to finish.</h2>
+      <div>
+        <dl class="facts">
+          <div><dt>Developer</dt><dd>Meraas</dd></div>
+          <div><dt>Main contractor</dt><dd>Dutco</dd></div>
+          <div><dt>Architecture</dt><dd>ACPV Architects</dd></div>
+          <div><dt>Location</dt><dd>Jumeirah Bay Island, Dubai</dd></div>
+          <div><dt>Status</dt><dd>Ongoing</dd></div>
+        </dl>
+        <div class="sec-head" style="margin-top:72px"><span class="sc">Scope of work</span><span class="sc">05 packages</span></div>
+        <div class="chips"><span>Flooring</span><span>Wall cladding</span><span>Columns</span><span>Custom marble</span><span>Freestanding bathtubs</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head"><h2 class="h-m" data-split>More from the portfolio</h2><span class="sc">Residential · Dubai</span></div>
+      <div class="rel">
+        <a class="rcard" href="template-a-editorial.html" data-r><div class="ph" data-wipe><img src="marriott-hotel-abu-dhabi-03.jpg" alt="Marriott Hotel Abu Dhabi" loading="lazy"></div><div class="meta"><h3>Marriott Downtown</h3><span class="m">Abu Dhabi · 2016</span></div><span class="why sc">Marble interiors</span></a>
+        <a class="rcard" href="project-etihad-museum.html" data-r style="--d:1"><div class="ph" data-wipe style="--d:1"><img src="related-etihad.jpg" alt="Etihad Museum" loading="lazy"></div><div class="meta"><h3>Etihad Museum</h3><span class="m">Dubai · 2017</span></div><span class="why sc">Also in Dubai</span></a>
+        <a class="rcard" href="project-mediclinic-parkview-hospital.html" data-r style="--d:2"><div class="ph" data-wipe style="--d:2"><img src="related-mediclinic.jpg" alt="Mediclinic Parkview" loading="lazy"></div><div class="meta"><h3>Mediclinic Parkview</h3><span class="m">Dubai · 2018</span></div><span class="why sc">Also in Dubai</span></a>
+      </div>
+    </div>
+  </section>
+
+  <a class="next" href="template-c-scale.html">
+    <div class="ph"><img src="hamad-international-airport-emiri-terminal-01.jpg" alt="" data-par="0.08" loading="lazy"></div>
+    <div class="wrap in-n"><div><span class="sc">Next project</span><h2 data-split>Emiri Terminal</h2></div><span class="arr" aria-hidden="true">→</span></div>
+  </a>
+  <section class="cta-band"><div class="wrap">
+    <h2 data-split>Building from quarry<br><em>to skyline.</em></h2>
+    <div class="acts" data-r><a class="btn solid" href="../contact.html">Start a conversation <span aria-hidden="true">→</span></a><a class="btn" href="../projects.html">All projects</a></div>
+  </div></section>
+</main>
+<footer class="foot"><div class="wrap"><span>© 2026 El Alfy Holding</span><span>Privacy · Terms · Cookies</span></div></footer>
+<script src="tpl.js"></script>
+</body>
+</html>

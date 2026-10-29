@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sustainability Pavilion, Expo 2020 Dubai — El Alfy Holding</title>
+<meta name="description" content="Terra, the Sustainability Pavilion at Expo 2020 Dubai — natural stone works by El Alfy, from selection and mock-ups to installation.">
+<link rel="preload" href="instrument-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="tpl.css">
+<style>
+/* TEMPLATE D — JOURNEY
+   For: projects with a delivery story worth telling (site photos, mock-ups, phased work).
+   Numbers lead, a before/after slider shows site vs finished, and the process is told step by step
+   with a sticky list that follows the photographs. */
+.d-hero{padding-top:150px}
+.d-hero .top{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:end}
+.d-hero .crumb{color:var(--muted);opacity:1;margin-bottom:36px}
+.d-hero .eyebrow{display:block;color:var(--muted);margin-bottom:20px}
+.d-hero h1{font-size:clamp(56px,8.4vw,136px)}
+.d-hero .tags{display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--soft);font-size:14px;padding-bottom:12px}
+.d-hero .tags span+span::before{content:"·";margin-right:18px;color:var(--faint)}
+.d-cover{margin-top:56px;position:relative;height:min(78vh,780px);overflow:hidden}
+.d-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:-1px}
+.nums div{padding:28px 24px 30px 0;position:relative}
+.nums div+div{padding-left:24px;border-left:1px solid var(--rule)}
+.nums .rl{position:absolute;left:0;right:0;top:0;height:1px;background:var(--ink)}
+.nums b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(44px,4.8vw,76px);line-height:.95}
+.nums b small{font-size:.42em;margin-left:4px;color:var(--muted)}
+.nums div>span.sc{display:block;margin-top:10px;color:var(--muted)}
+
+.intro4{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:64px;align-items:end}
+
+/* before / after */
+.cmp{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--bg-2);--x:50%;user-select:none}
+.cmp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.cmp .after{clip-path:inset(0 0 0 var(--x))}
+.cmp .handle{position:absolute;top:0;bottom:0;left:var(--x);width:1px;background:var(--on);pointer-events:none}
+.cmp .handle::after{content:"⟷";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:var(--on);color:var(--ink);display:grid;place-items:center;font-size:20px;box-shadow:0 8px 30px rgba(0,0,0,.25)}
+.cmp input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.cmp .lab{position:absolute;bottom:20px;z-index:1;color:var(--on);background:rgba(27,26,24,.55);padding:8px 12px;border-radius:999px;backdrop-filter:blur(6px)}
+.cmp .lab.l{left:20px}.cmp .lab.r{right:20px}
+.js-motion .cmp.hint.is-in{animation:hint 2.6s var(--ease) 1}
+@keyframes hint{0%{--x:50%}35%{--x:38%}70%{--x:62%}100%{--x:50%}}
+@property --x{syntax:'<percentage>';inherits:true;initial-value:50%}
+
+/* scrollytelling */
+.steps{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px}
+.steps .rail{position:sticky;top:120px;align-self:start}
+.steps ol{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.steps li{display:grid;grid-template-columns:56px minmax(0,1fr);gap:8px 16px;padding:22px 0;border-bottom:1px solid var(--rule);color:var(--faint);transition:color .5s}
+.steps li .n{font-family:var(--serif);font-size:36px;line-height:1}
+.steps li h3{font-family:var(--serif);font-weight:400;font-size:clamp(26px,2.4vw,34px);line-height:1.05}
+.steps li p{grid-column:2;font-size:14.5px;max-height:0;overflow:hidden;opacity:0;transition:max-height .7s var(--ease),opacity .5s}
+.steps li.active{color:var(--ink)}
+.steps li.active p{max-height:80px;opacity:1;color:var(--soft)}
+.html-static .steps li{color:var(--ink)}
+.html-static .steps li p{max-height:none;opacity:1}
+.steps .panels{display:flex;flex-direction:column;gap:24vh;padding-block:4vh 10vh}
+.steps .panel .ph{aspect-ratio:4/3}
+.steps .panel figcaption{display:flex;justify-content:space-between;margin-top:12px;font-size:13px;color:var(--muted)}
+
+/* materials as a measured bar */
+.mbar{display:flex;height:84px;border-radius:2px;overflow:hidden;margin-bottom:36px}
+.mbar i{display:block;background:var(--c);flex:var(--f);position:relative;box-shadow:inset -1px 0 0 rgba(255,255,255,.5)}
+.js-motion .mbar i{flex:0;transition:flex 1.6s var(--ease-io);transition-delay:calc(var(--d,0)*120ms)}
+.js-motion .mbar.is-in i{flex:var(--f)}
+.mlist{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.mlist div{border-top:1px solid var(--ink);padding-top:14px}
+.mlist .dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--c);margin-right:8px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.1)}
+.mlist b{display:block;font-family:var(--serif);font-weight:400;font-size:24px;line-height:1.1;margin-top:8px}
+.mlist span{display:block;color:var(--muted);font-size:13.5px;margin-top:4px}
+
+.team{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:start}
+
+@media (max-width:900px){
+  .d-hero .top,.intro4,.steps,.team{grid-template-columns:minmax(0,1fr)}
+  .nums{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nums div:nth-child(3){padding-left:0;border-left:0}
+  .steps .rail{position:relative;top:0}
+  .steps .panels{gap:40px;padding:0}
+  .steps li p{max-height:none;opacity:1}
+  .steps li{color:var(--ink)}
+  .cmp{aspect-ratio:4/3}
+  .mlist{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+</style>
+</head>
+<body>
+<header class="nav" data-nav><div class="wrap">
+  <a class="logo" href="../index.html">EL ALFY</a>
+  <ul><li><a href="../about.html">About</a></li><li><a href="../projects.html" aria-current="page">Projects</a></li><li><a href="../portfolio.html">Portfolio</a></li><li><a href="../careers.html">Careers</a></li><li><a class="cta" href="../contact.html">Contact</a></li></ul>
+  <button class="menu" type="button" aria-expanded="false">Menu</button>
+</div></header>
+
+<main>
+  <!-- HERO: title + tags, wide cover photo, four counted numbers -->
+  <section class="d-hero">
+    <div class="wrap">
+      <nav class="crumb sc" aria-label="Breadcrumb" data-r><a href="../projects.html">Projects</a><i>/</i><span>Governmental</span></nav>
+      <div class="top">
+        <div><span class="eyebrow sc" data-r>Terra · Expo 2020 Dubai</span><h1 class="h-xl" data-split="lines">Sustainability<br>Pavilion</h1></div>
+        <p class="tags" data-r style="--d:3"><span>Dubai, UAE</span><span>2021</span><span>Flooring</span><span>Cladding</span><span>Biome wall</span><span>Bathrooms</span></p>
+      </div>
+    </div>
+    <div class="wrap"><div class="ph d-cover" data-wipe><img src="sustainability-pavilion-01.jpg" alt="Terra's solar canopy lit at night" data-par="0.1" fetchpriority="high"></div></div>
+    <div class="wrap">
+      <div class="nums">
+        <!-- repeat: documented figures only -->
+        <div data-r><span class="rl" data-line></span><b><span data-count="29159">29,159</span><small>m²</small></b><span class="sc">Pavilion footprint</span></div>
+        <div data-r style="--d:1"><span class="rl" data-line style="--d:1"></span><b><span data-count="4">4</span><small>GWh</small></b><span class="sc">Solar energy a year</span></div>
+        <div data-r style="--d:2"><span class="rl" data-line style="--d:2"></span><b><span data-count="22000">22,000</span><small>L</small></b><span class="sc">Water produced a day</span></div>
+        <div data-r style="--d:3"><span class="rl" data-line style="--d:3"></span><b><span data-count="6500">6,500</span><small>m²</small></b><span class="sc">Crema Marfil floor</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap intro4">
+      <h2 class="h-l" data-split>Built to run on the sun.</h2>
+      <p class="body" data-r>Terra was the centrepiece of Expo 2020 Dubai and is now a permanent education and research centre. El Alfy Saraya delivered its natural stone works on time, with full-scale mock-ups and third-party testing.</p>
+    </div>
+  </section>
+
+  <!-- BEFORE / AFTER: drag the handle; left = site, right = finished -->
+  <section class="sec" style="padding-top:0;border-top:0">
+    <div class="wrap">
+      <div class="sec-head"><span class="sc">The biome wall · Limestone, rubble finish</span><span class="sc">Drag to compare</span></div>
+      <div class="cmp hint" data-compare data-r>
+        <img src="sustainability-pavilion-08.jpg" alt="The limestone biome wall under construction" loading="lazy">
+        <img class="after" src="sustainability-pavilion-04.jpg" alt="The finished café terrace beside the biome wall" loading="lazy">
+        <span class="handle" aria-hidden="true"></span>
+        <span class="lab l sc">On site</span><span class="lab r sc">Finished</span>
+        <input type="range" min="0" max="100" value="50" aria-label="Compare the wall on site and finished">
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS: list stays in view, active step follows the photographs -->
+  <section class="sec">
+    <div class="wrap steps" data-steps>
+      <div class="rail">
+        <span class="k sc">How it was delivered</span>
+        <h2 class="h-l" data-split style="margin-bottom:40px">Four steps, on time.</h2>
+        <ol>
+          <li data-step-label="1"><span class="n">01</span><h3>Selection</h3><p>Stone chosen for each zone of the pavilion.</p></li>
+          <li data-step-label="2"><span class="n">02</span><h3>Mock-ups</h3><p>Full-scale samples approved on site.</p></li>
+          <li data-step-label="3"><span class="n">03</span><h3>Testing</h3><p>Third-party tests before release.</p></li>
+          <li data-step-label="4"><span class="n">04</span><h3>Installation</h3><p>Delivered on time for the Expo.</p></li>
+        </ol>
+      </div>
+      <div class="panels">
+        <figure class="panel" data-step="1" data-lightbox="Biome wall"><div class="ph" data-wipe><img src="sustainability-pavilion-05.jpg" alt="Rough-split limestone of the biome wall" loading="lazy" data-par="0.06" style="object-position:50% 40%"></div><figcaption><span>Limestone, rubble finish</span><span>01</span></figcaption></figure>
+        <figure class="panel" data-step="2" data-lightbox="Entrance"><div class="ph" data-wipe><img src="sustainability-pavilion-06.jpg" alt="Pavilion entrance" loading="lazy" data-par="0.06"></div><figcaption><span>Entrance</span><span>02</span></figcaption></figure>
+        <figure class="panel" data-step="3" data-lightbox="Inside Terra"><div class="ph" data-wipe><img src="sustainability-pavilion-09.jpg" alt="Interior exhibition space" loading="lazy" data-par="0.06"></div><figcaption><span>Inside Terra</span><span>03</span></figcaption></figure>
+        <figure class="panel" data-step="4" data-lightbox="Energy trees"><div class="ph" data-wipe><img src="sustainability-pavilion-02.jpg" alt="Solar energy trees around the pavilion" loading="lazy" data-par="0.06"></div><figcaption><span>Energy trees</span><span>04</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- MATERIALS: bar widths are indicative shares; label each stone below -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head"><span class="sc">Materials</span><span class="sc">04 stones</span></div>
+      <div class="mbar" data-r aria-hidden="true"><i style="--c:#E4D6BC;--f:6"></i><i style="--c:#EFECE7;--f:2;--d:1"></i><i style="--c:#2B2A28;--f:1;--d:2"></i><i style="--c:#BFAE90;--f:3;--d:3"></i></div>
+      <div class="mlist">
+        <div data-r><i class="dot" style="--c:#E4D6BC"></i><span class="sc" style="display:inline">Interior flooring</span><b>Crema Marfil</b><span>6,500 m²</span></div>
+        <div data-r style="--d:1"><i class="dot" style="--c:#EFECE7"></i><span class="sc" style="display:inline">Interior cladding</span><b>Bianco Sivec</b><span>Marble</span></div>
+        <div data-r style="--d:2"><i class="dot" style="--c:#2B2A28"></i><span class="sc" style="display:inline">Bathrooms</span><b>Black Marquina</b><span>Marble</span></div>
+        <div data-r style="--d:3"><i class="dot" style="--c:#BFAE90"></i><span class="sc" style="display:inline">Biome wall</span><b>Limestone</b><span>Rubble finish</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap team">
+      <h2 class="h-l" data-split>The project team.</h2>
+      <dl class="facts">
+        <div><dt>Client</dt><dd>Expo Dubai 2020 LLC</dd></div>
+        <div><dt>Project management</dt><dd>Turner Construction International</dd></div>
+        <div><dt>Architecture</dt><dd>Grimshaw Architects · Rice Perry Ellis</dd></div>
+        <div><dt>Main contractor</dt><dd>ASGC Construction LLC</dd></div>
+        <div><dt>Stone works</dt><dd>El Alfy Saraya</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head"><h2 class="h-m" data-split>More from the portfolio</h2><span class="sc">Landmarks · UAE</span></div>
+      <div class="rel">
+        <a class="rcard" href="template-e-immersive.html" data-r><div class="ph" data-wipe><img src="etihad-museum-01.jpg" alt="Etihad Museum" loading="lazy"></div><div class="meta"><h3>Etihad Museum</h3><span class="m">Dubai · 2017</span></div><span class="why sc">Same contractor</span></a>
+        <a class="rcard" href="project-sheikh-zayed-mosque-boundary-wall.html" data-r style="--d:1"><div class="ph" data-wipe style="--d:1"><img src="related-szgm.jpg" alt="Sheikh Zayed Grand Mosque" loading="lazy"></div><div class="meta"><h3>Sheikh Zayed Grand Mosque</h3><span class="m">Abu Dhabi</span></div><span class="why sc">Landmarks</span></a>
+        <a class="rcard" href="template-c-scale.html" data-r style="--d:2"><div class="ph" data-wipe style="--d:2"><img src="hamad-international-airport-emiri-terminal-01.jpg" alt="Emiri Terminal" loading="lazy"></div><div class="meta"><h3>Emiri Terminal</h3><span class="m">Doha</span></div><span class="why sc">Governmental</span></a>
+      </div>
+    </div>
+  </section>
+
+  <a class="next" href="template-e-immersive.html">
+    <div class="ph"><img src="etihad-museum-02.jpg" alt="" data-par="0.08" loading="lazy"></div>
+    <div class="wrap in-n"><div><span class="sc">Next project</span><h2 data-split>Etihad Museum</h2></div><span class="arr" aria-hidden="true">→</span></div>
+  </a>
+  <section class="cta-band"><div class="wrap">
+    <h2 data-split>Building from quarry<br><em>to skyline.</em></h2>
+    <div class="acts" data-r><a class="btn solid" href="../contact.html">Start a conversation <span aria-hidden="true">→</span></a><a class="btn" href="../projects.html">All projects</a></div>
+  </div></section>
+</main>
+<footer class="foot"><div class="wrap"><span>© 2026 El Alfy Holding</span><span>Privacy · Terms · Cookies</span></div></footer>
+<script src="tpl.js"></script>
+</body>
+</html>

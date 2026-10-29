@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Etihad Museum — El Alfy Holding</title>
+<meta name="description" content="Etihad Museum, Dubai — interior stone cladding, floors and the grand staircase supplied, fabricated and installed by El Alfy.">
+<link rel="preload" href="instrument-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="tpl.css">
+<style>
+/* TEMPLATE E — IMMERSIVE
+   For: photogenic landmark projects with strong photography (8+ images).
+   Full-screen photographs stack over each other as you scroll; each one is a stop on the visitor's path.
+   Then a filmstrip index, materials by zone and the project facts. */
+.e-intro{padding-top:150px;padding-bottom:72px}
+.e-intro .crumb{color:var(--muted);opacity:1;margin-bottom:36px}
+.e-intro .row{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:end}
+.e-intro h1{font-size:clamp(60px,9vw,150px)}
+.e-intro .side{display:flex;flex-direction:column;gap:24px}
+.e-intro dl.mini{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.e-intro dl.mini div{border-top:1px solid var(--ink);padding-top:10px}
+.e-intro dl.mini dt{color:var(--muted)}
+.e-intro dl.mini dd{font-family:var(--serif);font-size:22px;margin-top:4px}
+
+/* stacked full-screen cards */
+.stack{position:relative}
+.card{position:sticky;top:0;height:100vh;overflow:hidden;color:var(--on);background:#1B1A18}
+.card .img{position:absolute;inset:0;transform:scale(calc(1 - var(--c,0) * .08));filter:brightness(calc(1 - var(--c,0) * .55));transform-origin:50% 0;will-change:transform}
+.card .img img{width:100%;height:100%;object-fit:cover}
+.card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,19,17,.25) 0%,rgba(20,19,17,0) 30%,rgba(20,19,17,.15) 60%,rgba(20,19,17,.75) 100%);pointer-events:none}
+.card .cap{position:absolute;left:0;right:0;bottom:56px;z-index:1}
+.card .cap .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:40px;align-items:end}
+.card .stop{display:block;color:var(--on-soft);margin-bottom:16px}
+.card h2{font-family:var(--serif);font-weight:400;font-size:clamp(48px,6.4vw,104px);line-height:.94}
+.card p{color:var(--on-soft);max-width:38ch}
+.card .mat-tag{display:inline-flex;align-items:center;gap:10px;margin-top:18px;padding:8px 14px 8px 8px;border-radius:999px;background:rgba(244,242,238,.12);backdrop-filter:blur(8px);font-size:13px}
+.card .mat-tag i{width:22px;height:22px;border-radius:50%;background:var(--c);box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
+.card .count{position:absolute;top:96px;right:var(--gut);z-index:1;font-family:var(--serif);font-size:22px;color:var(--on-soft)}
+.js-motion .card .cap .wrap>*{opacity:calc(1 - var(--c,0) * 1.6)}
+html:not(.js-motion) .card{position:relative;height:88vh}
+
+/* filmstrip index */
+.film{display:flex;gap:8px;height:clamp(220px,26vw,360px)}
+.film figure{flex:1;position:relative;overflow:hidden;transition:flex 1s var(--ease);min-width:0}
+.film figure:hover{flex:3.2}
+.film img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.85);transition:filter .6s}
+.film figure:hover img{filter:none}
+.film figcaption{position:absolute;left:12px;bottom:10px;color:var(--on);font-size:12px;opacity:0;transform:translateY(8px);transition:opacity .5s,transform .6s var(--ease);white-space:nowrap;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.film figure:hover figcaption{opacity:1;transform:none}
+
+.zones{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:64px}
+.e-close{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:start}
+
+@media (max-width:900px){
+  .e-intro .row,.zones,.e-close{grid-template-columns:minmax(0,1fr)}
+  .card .cap .wrap{grid-template-columns:minmax(0,1fr);gap:16px}
+  .card .cap{bottom:36px}
+  .film{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));height:auto}
+  .film figure{aspect-ratio:1/1}
+  .film figure:hover{flex:1}
+  .film figcaption{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<header class="nav" data-nav><div class="wrap">
+  <a class="logo" href="../index.html">EL ALFY</a>
+  <ul><li><a href="../about.html">About</a></li><li><a href="../projects.html" aria-current="page">Projects</a></li><li><a href="../portfolio.html">Portfolio</a></li><li><a href="../careers.html">Careers</a></li><li><a class="cta" href="../contact.html">Contact</a></li></ul>
+  <button class="menu" type="button" aria-expanded="false">Menu</button>
+</div></header>
+
+<main>
+  <section class="e-intro">
+    <div class="wrap">
+      <nav class="crumb sc" aria-label="Breadcrumb" data-r><a href="../projects.html">Projects</a><i>/</i><span>Governmental</span></nav>
+      <div class="row">
+        <h1 class="h-xl" data-split="lines">Etihad<br>Museum</h1>
+        <div class="side">
+          <p class="lede" data-r style="--d:3">A museum to the Union, finished in stone.</p>
+          <dl class="mini">
+            <div data-r style="--d:4"><dt class="sc">City</dt><dd>Dubai</dd></div>
+            <div data-r style="--d:5"><dt class="sc">Year</dt><dd>2017</dd></div>
+            <div data-r style="--d:6"><dt class="sc">Stops</dt><dd><span data-count="4">4</span></dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK: one .card per stop; each new photo slides over the last -->
+  <section class="stack" data-stack>
+    <article class="card">
+      <div class="img"><img src="etihad-museum-03.jpg" alt="Glazed lobby with white marble floor" fetchpriority="high"></div>
+      <span class="count">01 / 04</span>
+      <div class="cap"><div class="wrap"><div><span class="stop sc">Stop 01 · Entrance</span><h2 data-split>A floor of light</h2></div><div><p data-r>White marble floors run from the glazed lobby into the building.</p><span class="mat-tag" data-r style="--d:1"><i style="--c:#F1EFEA"></i>Bianco Statuario Extra</span></div></div></div>
+    </article>
+    <article class="card">
+      <div class="img"><img src="etihad-museum-02.jpg" alt="Grand staircase beside the curtain wall" loading="lazy"></div>
+      <span class="count">02 / 04</span>
+      <div class="cap"><div class="wrap"><div><span class="stop sc">Stop 02 · Grand staircase</span><h2 data-split>The staircase</h2></div><div><p data-r>Treads and risers in stone, rising alongside the curtain wall.</p><span class="mat-tag" data-r style="--d:1"><i style="--c:#E9E6E1"></i>Arabescato Corchia</span></div></div></div>
+    </article>
+    <article class="card">
+      <div class="img"><img src="etihad-museum-06.jpg" alt="Curved gallery walls with the founders' portraits" loading="lazy"></div>
+      <span class="count">03 / 04</span>
+      <div class="cap"><div class="wrap"><div><span class="stop sc">Stop 03 · Galleries</span><h2 data-split>Curved walls</h2></div><div><p data-r>Cladding follows the curve of the galleries and the founders’ portraits.</p><span class="mat-tag" data-r style="--d:1"><i style="--c:#F1EFEA"></i>Marble cladding</span></div></div></div>
+    </article>
+    <article class="card">
+      <div class="img"><img src="etihad-museum-09.jpg" alt="Calligraphy set into the stone floor" loading="lazy"></div>
+      <span class="count">04 / 04</span>
+      <div class="cap"><div class="wrap"><div><span class="stop sc">Stop 04 · Calligraphy floor</span><h2 data-split>Words underfoot</h2></div><div><p data-r>Calligraphy set into the floor of the main hall.</p><span class="mat-tag" data-r style="--d:1"><i style="--c:#1F1E1C"></i>Black Marquina accents</span></div></div></div>
+    </article>
+  </section>
+
+  <section class="sec" style="border-top:0">
+    <div class="wrap">
+      <div class="sec-head"><h2 class="h-m" data-split>Every space, at a glance</h2><span class="sc">Hover to open</span></div>
+      <div class="film" data-r>
+        <figure data-lightbox="Exterior"><img src="etihad-museum-01.jpg" alt="Museum exterior" loading="lazy"><figcaption>Exterior</figcaption></figure>
+        <figure data-lightbox="Columns"><img src="etihad-museum-04.jpg" alt="Stone columns" loading="lazy"><figcaption>Columns</figcaption></figure>
+        <figure data-lightbox="Lounge"><img src="etihad-museum-05.jpg" alt="Lounge" loading="lazy"><figcaption>Lounge</figcaption></figure>
+        <figure data-lightbox="Reception"><img src="etihad-museum-07.jpg" alt="Reception" loading="lazy"><figcaption>Reception</figcaption></figure>
+        <figure data-lightbox="Portraits"><img src="etihad-museum-08.jpg" alt="Portrait gallery" loading="lazy"><figcaption>Portraits</figcaption></figure>
+        <figure data-lightbox="Courtyard screen"><img src="etihad-museum-10.jpg" alt="Courtyard screen" loading="lazy"><figcaption>Courtyard</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head"><span class="sc">Materials</span><span class="sc">By zone</span></div>
+      <div class="zones">
+        <div>
+          <span class="k sc">Flooring</span>
+          <div class="mat" data-r><i class="sw vein" style="--c:#F1EFEA"></i><div><b>Bianco Statuario Extra</b><span>Floors throughout</span></div><span class="n sc">01</span></div>
+          <div class="mat" data-r style="--d:1"><i class="sw vein" style="--c:#E9E6E1;--d:1"></i><div><b>Arabescato Corchia</b><span>Feature floors and staircase</span></div><span class="n sc">02</span></div>
+        </div>
+        <div>
+          <span class="k sc">Accents</span>
+          <div class="mat" data-r style="--d:2"><i class="sw vein" style="--c:#24231F;--d:2"></i><div><b>Black Marquina Marble</b><span>Inlays and calligraphy</span></div><span class="n sc">03</span></div>
+          <div class="sec-head" style="margin-top:56px;margin-bottom:24px"><span class="sc">Scope of work</span><span class="sc">Supply · fabrication · installation</span></div>
+          <div class="chips"><span>Interior cladding</span><span>Interior flooring</span><span>Interior staircase</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap e-close">
+      <p class="lede" data-split>The museum commemorates the unification of the UAE and serves as a cultural and educational hub.</p>
+      <div>
+        <p class="body" data-r style="margin-bottom:40px">El Alfy Holding supplied, fabricated and installed its interior stone: wall cladding and feature walls, the floors throughout, and the grand staircase.</p>
+        <dl class="facts">
+          <div><dt>Architect</dt><dd>Moriyama &amp; Teshima Architects</dd></div>
+          <div><dt>Project management</dt><dd>CH2M Hill</dd></div>
+          <div><dt>Main contractor</dt><dd>ASGC</dd></div>
+          <div><dt>Stone works</dt><dd>El Alfy Holding</dd></div>
+          <div><dt>Year</dt><dd>2017</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head"><h2 class="h-m" data-split>More from the portfolio</h2><span class="sc">Landmarks · UAE</span></div>
+      <div class="rel">
+        <a class="rcard" href="template-d-journey.html" data-r><div class="ph" data-wipe><img src="sustainability-pavilion-03.jpg" alt="Sustainability Pavilion" loading="lazy"></div><div class="meta"><h3>Sustainability Pavilion</h3><span class="m">Dubai · 2021</span></div><span class="why sc">Same contractor</span></a>
+        <a class="rcard" href="template-b-material.html" data-r style="--d:1"><div class="ph" data-wipe style="--d:1"><img src="bvlgari-lighthouse-03.jpg" alt="Bvlgari Lighthouse" loading="lazy"></div><div class="meta"><h3>Bvlgari Lighthouse</h3><span class="m">Dubai · Ongoing</span></div><span class="why sc">Arabescato Corchia</span></a>
+        <a class="rcard" href="project-sheikh-zayed-mosque-boundary-wall.html" data-r style="--d:2"><div class="ph" data-wipe style="--d:2"><img src="related-szgm.jpg" alt="Sheikh Zayed Grand Mosque" loading="lazy"></div><div class="meta"><h3>Sheikh Zayed Grand Mosque</h3><span class="m">Abu Dhabi</span></div><span class="why sc">Landmarks</span></a>
+      </div>
+    </div>
+  </section>
+
+  <a class="next" href="template-a-editorial.html">
+    <div class="ph"><img src="marriott-hotel-abu-dhabi-01.jpg" alt="" data-par="0.08" loading="lazy"></div>
+    <div class="wrap in-n"><div><span class="sc">Next project</span><h2 data-split>Marriott Downtown</h2></div><span class="arr" aria-hidden="true">→</span></div>
+  </a>
+  <section class="cta-band"><div class="wrap">
+    <h2 data-split>Building from quarry<br><em>to skyline.</em></h2>
+    <div class="acts" data-r><a class="btn solid" href="../contact.html">Start a conversation <span aria-hidden="true">→</span></a><a class="btn" href="../projects.html">All projects</a></div>
+  </div></section>
+</main>
+<footer class="foot"><div class="wrap"><span>© 2026 El Alfy Holding</span><span>Privacy · Terms · Cookies</span></div></footer>
+<script src="tpl.js"></script>
+</body>
+</html>
